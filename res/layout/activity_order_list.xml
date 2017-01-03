@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/layout_width_height_ff"
+    android:background="#e9e9e9"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <com.anniu.shandiandaojia.view.pulltorefreshlayout.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        style="@style/layout_width_height_ff" >
+
+        <include
+            android:id="@+id/head_view_home"
+            layout="@layout/refresh_head" />
+
+        <com.anniu.shandiandaojia.view.pulltorefreshlayout.pullableview.PullableListView
+            android:id="@+id/listview"
+            style="@style/layout_width_height_ff"
+            android:scrollbars="none" >
+        </com.anniu.shandiandaojia.view.pulltorefreshlayout.pullableview.PullableListView>
+
+        <include layout="@layout/load_more" />
+    </com.anniu.shandiandaojia.view.pulltorefreshlayout.PullToRefreshLayout>
+
+</LinearLayout>

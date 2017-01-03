@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/title_bar" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_style"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/head" />
+
+    <TextView
+        android:id="@+id/notice"
+        style="@style/layout_width_height_fw"
+        android:layout_below="@id/line"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/feedback_hint"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/notice"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:gravity="left|top"
+        android:hint="@string/feedback_input_hint"
+        android:inputType="textMultiLine"
+        android:maxLength="200"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/bt_commit"
+        style="@style/layout_width_height_fw"
+        android:layout_below="@id/et_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/buttom_selector_green"
+        android:text="@string/commit"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/lee_progressBar"
+                style="@style/ProgressBar_loading"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:indeterminate="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

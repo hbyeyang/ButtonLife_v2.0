@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_layout"
+    style="@style/layout_width_height_ff"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="12dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/layout_width_height_ww"
+            android:layout_centerVertical="true"
+            android:text="@string/consignee" />
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/layout_width_height_fw"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_name"
+            android:background="@color/white"
+            android:hint="@string/name_input_hint"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/line_style"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="12dp">
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/layout_width_height_ww"
+            android:layout_centerVertical="true"
+            android:text="@string/phone" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="@style/layout_width_height_fw"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_phone"
+            android:background="@color/white"
+            android:hint="@string/phone_input_hint"
+            android:maxLength="11"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/line_style"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="12dp">
+
+        <TextView
+            android:id="@+id/tv_district"
+            style="@style/layout_width_height_ww"
+            android:layout_centerVertical="true"
+            android:text="所在城区：" />
+
+        <EditText
+            android:id="@+id/et_district"
+            style="@style/layout_width_height_fw"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_district"
+            android:background="@color/white"
+            android:clickable="true"
+            android:hint="请输入城区和区域"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/line_style"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="12dp">
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/layout_width_height_ww"
+            android:layout_centerVertical="true"
+            android:text="@string/address" />
+
+        <EditText
+            android:id="@+id/et_address"
+            style="@style/layout_width_height_fw"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_address"
+            android:background="@color/white"
+            android:hint="@string/address_input_hint"
+            android:maxLength="50"
+            android:maxLines="3"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_save"
+        style="@style/layout_width_height_fw"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttom_selector_green"
+        android:text="@string/save"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_gray" />
+
+</LinearLayout>

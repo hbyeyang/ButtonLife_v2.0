@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_fw"
+    android:layout_margin="5dp"
+    android:background="@drawable/ticket_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_item"
+        style="@style/layout_width_height_fw"
+        android:paddingLeft="12dp">
+
+        <TextView
+            android:id="@+id/tv_water_name"
+            style="@style/layout_width_height_ww"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="雀巢桶装水"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_coupon_money"
+            style="@style/layout_width_height_ww"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:text="返10代金券"
+            android:textColor="#00bfff"
+            android:textSize="16sp" />
+
+
+        <RelativeLayout
+            style="@style/layout_width_height_fw"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/tv_water_num"
+                style="@style/layout_width_height_ww"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:text="剩余20桶"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                style="@style/layout_width_height_ww"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    style="@style/layout_width_height_ww"
+                    android:paddingRight="5dp"
+                    android:text="￥"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_water_money"
+                    style="@style/layout_width_height_ww"
+                    android:text="30元"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

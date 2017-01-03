@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_pop_group"
+    style="@style/layout_width_height_ff"
+    android:background="#89000000"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_width_height_ww"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+
+        <ListView
+            android:id="@+id/lv_list"
+            style="@style/layout_width_height_ff" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,328 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_width_height_ff"
+    android:background="@color/page_bg_gray"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <com.anniu.shandiandaojia.view.pulltorefreshlayout.pullableview.PullableScrollView
+        android:id="@+id/scroll_view"
+        style="@style/layout_width_height_ff"
+        android:background="@color/page_bg_gray"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center"
+                        android:text="@string/consignee" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/ll_contacts"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center"
+                        android:text="@string/receiving_address" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+
+                <ImageView
+                    style="@style/layout_width_height_ww"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/commit_order_address" />
+
+            <LinearLayout
+                style="@style/layout_width_height_fw"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/shop_name"
+                    style="@style/layout_width_height_ww"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/selected_goods"
+                    android:textSize="16sp" />
+
+                <View
+                    style="@style/line_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    style="@style/layout_width_height_fw"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/tv_water_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="2" />
+
+                    <TextView
+                        android:id="@+id/tv_water_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_water_price"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="2"
+                        android:gravity="right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/line_style"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp" />
+
+            <RelativeLayout
+                style="@style/layout_width_height_fw"
+                android:background="@color/white"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/pay_money"
+                    style="@style/layout_width_height_ww"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:id="@+id/tv_memo"
+                    style="@style/layout_width_height_ww"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:singleLine="true"
+                    android:text="@string/remark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_remark"
+                    android:layout_width="240dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/tv_memo"
+                    android:background="@color/white"
+                    android:gravity="center_vertical|right"
+                    android:hint="@string/remark_input_hint"
+                    android:singleLine="true" />
+
+                <ImageView
+                    style="@style/layout_width_height_ww"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <FrameLayout style="@style/layout_width_height_fw" >
+
+                <LinearLayout
+                    style="@style/layout_width_height_fw"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_wxzf"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white" >
+
+                        <ImageView
+                            android:id="@+id/iv_wxzf"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/wxzf" />
+
+                        <TextView
+                            style="@style/layout_width_height_ww"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_toRightOf="@+id/iv_wxzf"
+                            android:text="@string/wxzf" />
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/line_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_zfb"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white" >
+
+                        <ImageView
+                            android:id="@+id/iv_zfb"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/zfb" />
+
+                        <TextView
+                            style="@style/layout_width_height_ww"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_toRightOf="@+id/iv_zfb"
+                            android:text="@string/zfb" />
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/line_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_bdqb"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white" >
+
+                        <ImageView
+                            android:id="@+id/iv_bdqb"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/bdqb" />
+
+                        <TextView
+                            style="@style/layout_width_height_ww"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_toRightOf="@+id/iv_bdqb"
+                            android:text="@string/bdqb" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_group"
+                    style="@style/layout_width_height_fw"
+                    android:layout_marginTop="5dp"
+                    android:gravity="right" >
+
+                    <RadioButton
+                        android:id="@+id/rb_wxzf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/check_state"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/rb_zfb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/check_state" />
+
+                    <RadioButton
+                        android:id="@+id/rb_bdqb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/check_state" />
+                </RadioGroup>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/bt_commit"
+                style="@style/layout_width_height_fw"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/login_selector"
+                android:text="@string/commit_order"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.anniu.shandiandaojia.view.pulltorefreshlayout.pullableview.PullableScrollView>
+
+</LinearLayout>

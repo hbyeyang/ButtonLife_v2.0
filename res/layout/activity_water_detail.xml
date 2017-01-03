@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/head"
+        android:layout_marginBottom="60dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            style="@style/layout_width_height_fw"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/layout_width_height_fw"
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="160dp"
+                    android:layout_margin="5dp"
+                    android:scaleType="fitXY" />
+
+                <RelativeLayout
+                    style="@style/layout_width_height_fw"
+                    android:layout_below="@id/iv_img"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/layout_width_height_ww"
+                        android:text="雀巢水票(10桶)" />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        style="@style/layout_width_height_ww"
+                        android:layout_alignParentRight="true"
+                        android:text="230元"
+                        android:textColor="@color/category_tab_color_selected" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.anniu.shandiandaojia.view.MyExpandableListView
+                android:id="@+id/elv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:childDivider="#00000000"
+                android:drawSelectorOnTop="false"
+                android:listSelector="#00000000" />
+
+            <FrameLayout
+                style="@style/layout_width_height_fw"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_wxzf"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/iv_wxzf"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/wxzf" />
+
+                    <TextView
+                        style="@style/layout_width_height_ww"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:layout_toRightOf="@+id/iv_wxzf"
+                        android:text="@string/wxzf" />
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_group"
+                    style="@style/layout_width_height_fw"
+                    android:gravity="right">
+
+                    <RadioButton
+                        android:id="@+id/rb_wxzf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/check_state"
+                        android:checked="true" />
+                </RadioGroup>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_pay"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_pay"
+        android:text="立即支付"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/lee_progressBar"
+                style="@style/ProgressBar_loading"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:indeterminate="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_error"
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/head"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:background="@color/page_bg_gray"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/layout_width_height_ww"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/no_wifi" />
+
+            <TextView
+                android:id="@+id/lee_error_msg"
+                style="@style/layout_width_height_ww"
+                android:layout_marginBottom="10dp"
+                android:text="网络异常"
+                android:textColor="@color/font_color_33" />
+
+            <TextView
+                style="@style/layout_width_height_ww"
+                android:text="请点击屏幕重新加载！"
+                android:textColor="@color/font_color_66" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

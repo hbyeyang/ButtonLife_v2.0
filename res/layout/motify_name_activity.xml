@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_group"
+    style="@style/layout_width_height_ff"
+    android:background="#89000000"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout_width_height_ww"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/bg_gray"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/layout_width_height_fw"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="请输入您的姓名"
+            android:textSize="18sp" />
+
+        <com.anniu.shandiandaojia.view.ClearEditText
+            android:id="@+id/clear_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:ems="11"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+
+            <requestFocus />
+        </com.anniu.shandiandaojia.view.ClearEditText>
+
+        <TextView
+            android:id="@+id/notice"
+            style="@style/layout_width_height_fw"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:text="12个字符，可由中英文、数字等符号组成。"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            style="@style/layout_width_height_fw"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="取消" />
+
+            <TextView
+            	android:id="@+id/confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="确定"
+                android:textColor="@color/title_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/title_bar" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_style"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/head" />
+
+    <ListView
+        android:id="@+id/lv_voucherticket"
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/line"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="5dp"
+        android:divider="#00000000"
+        android:dividerHeight="5dp"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/lee_progressBar"
+                style="@style/ProgressBar_loading"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:indeterminate="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

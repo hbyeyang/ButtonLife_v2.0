@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff"
+    android:background="@color/bg_gray" >
+
+    <include
+        android:id="@+id/shopping_title"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_init_data"
+        style="@style/layout_width_height_fw"
+        android:layout_below="@id/shopping_title"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg_gray" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/layout_width_height_fw"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:text="已选商品"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/bg_gray" />
+
+        <ListView
+            android:id="@+id/listview"
+            style="@style/layout_width_height_fw"
+            android:background="@color/white"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <View
+            style="@style/line_style"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="50dp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_cart"
+        layout="@layout/home_cart" />
+
+    <View
+        style="@style/line_style"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/layout_cart" />
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.ant.liao.GifView
+                android:id="@+id/gif"
+                style="@style/layout_width_height_ww"
+                android:layout_centerInParent="true"
+                android:enabled="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_error"
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/shopping_title"
+        android:visibility="gone" >
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:background="@color/page_bg_gray"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                style="@style/layout_width_height_ww"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/no_wifi" />
+
+            <TextView
+                android:id="@+id/lee_error_msg"
+                style="@style/layout_width_height_ww"
+                android:layout_marginBottom="10dp"
+                android:text="网络异常"
+                android:textColor="@color/font_color_33" />
+
+            <TextView
+                style="@style/layout_width_height_ww"
+                android:text="请点击屏幕重新加载！"
+                android:textColor="@color/font_color_66" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_empty"
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/shopping_title"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/empty_bg"
+            style="@style/layout_width_height_ww"
+            android:layout_centerInParent="true"
+            android:background="@drawable/empty" />
+
+        <TextView
+            style="@style/layout_width_height_ww"
+            android:layout_below="@id/empty_bg"
+            android:layout_centerHorizontal="true"
+            android:text="你的购物车是空的哦。" />
+    </RelativeLayout>
+
+</RelativeLayout>

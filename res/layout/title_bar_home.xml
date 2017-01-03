@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_fw"
+    android:background="@color/title_color" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title1"
+        style="@style/layout_width_height_fw"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/home_call" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_call"
+            android:background="@drawable/home_search" />
+
+        <RelativeLayout
+            android:id="@+id/rl_title_text"
+            style="@style/layout_width_height_ww"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/tv_shop_title"
+                style="@style/layout_width_height_ww"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_shop_title"
+                android:background="@drawable/home_title_arrow_down" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_personal"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/home_personal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_title2"
+        style="@style/layout_width_height_fw"
+        android:layout_below="@id/rl_title1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            style="@style/layout_width_height_fw"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <RelativeLayout
+                android:id="@+id/rl_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_time_str"
+                    style="@style/layout_width_height_ww"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/send_time"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_time_text"
+                    style="@style/layout_width_height_ww"
+                    android:layout_below="@id/tv_time_str"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_receive_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_time_receive"
+                    style="@style/layout_width_height_ww"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/mean_send_time"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_receive_time"
+                    style="@style/layout_width_height_ww"
+                    android:layout_below="@id/tv_time_receive"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:paddingRight="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_price_min"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" >
+
+                <TextView
+                    android:id="@+id/tv_price_min"
+                    style="@style/layout_width_height_ww"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/send_out"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_price_min_text"
+                    style="@style/layout_width_height_ww"
+                    android:layout_below="@id/tv_price_min"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_shop_close"
+            style="@style/layout_width_height_ww"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shop_close"
+            android:focusable="false"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

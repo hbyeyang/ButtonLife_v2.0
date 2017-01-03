@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<resources>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- MyDialog -->
+    <style name="MyDialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+    
+   
+		<style name="waterdialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item><!--边框-->
+		<item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+		<item name="android:windowIsTranslucent">false</item><!--半透明-->
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">@android:color/black</item>
+		<item name="android:windowBackground">@null</item>
+		<item name="android:backgroundDimEnabled">false</item><!--模糊-->
+		</style>
+
+
+    <!-- activity弹窗样式 -->
+    <style name="MyDialogStyleBottom" parent="android:Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="line_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.6dip</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="layout_width_height_ff">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="layout_width_height_fw">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layout_width_height_ww">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layout_width_height_wf">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="title_tv">
+        <item name="android:textColor">@color/title_tv_color</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="ProgressBar_loading">
+        <item name="android:maxHeight">16dp</item>
+        <item name="android:minWidth">28dp</item>
+        <item name="android:indeterminateDrawable">@anim/loading_anim</item>
+    </style>
+    <!-- 首页通栏标题字体设置 -->
+    <style name="home_column_title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:paddingLeft">12dp</item>
+    </style>
+    <!-- 首页通栏 更多 -->
+    <style name="home_column_more">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="style_ppw" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/head_in</item>
+        <item name="@android:windowExitAnimation">@anim/head_out</item>
+    </style>
+
+    <style name="style_ppwcart" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/bottom_in</item>
+        <item name="@android:windowExitAnimation">@anim/bottom_out</item>
+    </style>
+
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_bar" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_style"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/title" />
+
+    <ScrollView
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/line"
+        android:background="@color/bg_gray">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:orientation="vertical">
+
+            <com.anniu.shandiandaojia.view.MyListView
+                android:id="@+id/lv_waterticketinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:divider="#00000000"
+                android:dividerHeight="5dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_goumai"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="80dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_goumai"
+                    style="@style/layout_width_height_ww"
+                    android:background="@drawable/goumai" />
+
+                <TextView
+                    android:id="@+id/tv_goumai"
+                    style="@style/layout_width_height_ww"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/iv_goumai"
+                    android:text="@string/continue_buy_water_ticket"
+                    android:textColor="@color/water_ticket_color"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_fw"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/parentText"
+        style="@style/layout_width_height_ww"
+        android:layout_weight="1"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        style="@style/layout_width_height_ww"
+        android:background="@drawable/water_arrow_down" />
+
+</LinearLayout>

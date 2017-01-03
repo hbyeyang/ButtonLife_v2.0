@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="44dp"
+    android:background="@color/title_color"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_call"
+        android:background="@drawable/home_search" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title_text"
+        style="@style/layout_width_height_ww"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_shop_title"
+            style="@style/layout_width_height_ww"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_shop_title"
+            android:background="@drawable/home_title_arrow_down" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_personal"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/home_personal" />
+
+    <ImageView
+        android:id="@+id/iv_shop_close"
+        style="@style/layout_width_height_ww"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shop_close"
+        android:focusable="false"
+        android:visibility="gone" />
+</RelativeLayout>

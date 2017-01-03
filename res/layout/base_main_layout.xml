@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        style="@style/layout_width_height_ff"
+        android:background="@color/page_bg_gray" >
+    </RelativeLayout>
+
+</LinearLayout>

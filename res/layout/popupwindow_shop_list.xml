@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_pop_group"
+    style="@style/layout_width_height_fw"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/popwin"
+    android:orientation="vertical" />

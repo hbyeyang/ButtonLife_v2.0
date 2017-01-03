@@ -1,0 +1,218 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff">
+
+    <include
+        android:id="@+id/home_title"
+        layout="@layout/title_bar_home_new" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/home_title"
+        android:layout_marginBottom="50dp">
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:scrollbars="none"
+            style="@style/layout_width_height_ff">
+
+            <LinearLayout
+                style="@style/layout_width_height_ff"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager"
+                        style="@style/layout_width_height_ff" />
+
+                    <RelativeLayout
+                        style="@style/layout_width_height_ff"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/viewGroup"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" />
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_three_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="72dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_category"
+                        style="@style/layout_width_height_ww"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/home_category"
+                        android:gravity="center"
+                        android:text="@string/classify"
+                        android:textColor="@color/classify" />
+
+                    <TextView
+                        android:id="@+id/tv_carrying_water"
+                        style="@style/layout_width_height_ww"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/home_water"
+                        android:gravity="center"
+                        android:text="@string/a_key_send_water"
+                        android:textColor="@color/a_key_but_water" />
+
+                    <TextView
+                        android:id="@+id/tv_full"
+                        style="@style/layout_width_height_ww"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/home_full"
+                        android:gravity="center"
+                        android:text="@string/buy_full"
+                        android:textColor="@color/full_buy" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/search_bg" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="6dp"
+                    android:background="@color/bg_gray" />
+
+                <View
+                    style="@style/line_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/search_bg" />
+
+                <TextView
+                    android:id="@+id/tv_bargain_title"
+                    style="@style/home_column_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:text="@string/bargain"
+                    android:textSize="16sp" />
+
+                <com.anniu.shandiandaojia.view.MyGridView
+                    android:id="@+id/grid_view"
+                    style="@style/layout_width_height_fw"
+                    android:gravity="center"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3"
+                    android:padding="5dp"
+                    android:scrollbars="none"
+                    android:smoothScrollbar="false"
+                    android:stretchMode="columnWidth" />
+
+                <View
+                    android:id="@+id/line1"
+                    style="@style/line_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/search_bg" />
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="6dp"
+                    android:background="@color/bg_gray" />
+
+                <View
+                    android:id="@+id/line2"
+                    style="@style/line_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/search_bg" />
+
+                <LinearLayout
+                    android:id="@+id/column_category"
+                    style="@style/layout_width_height_fw"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/layout_cart"
+        layout="@layout/home_cart" />
+
+    <View
+        style="@style/line_style"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/layout_cart" />
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/lee_progressBar"
+                style="@style/ProgressBar_loading"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:indeterminate="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_error"
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/home_title"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:background="@color/page_bg_gray"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/layout_width_height_ww"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/no_wifi" />
+
+            <TextView
+                android:id="@+id/lee_error_msg"
+                style="@style/layout_width_height_ww"
+                android:layout_marginBottom="10dp"
+                android:text="网络异常"
+                android:textColor="@color/font_color_33" />
+
+            <TextView
+                style="@style/layout_width_height_ww"
+                android:text="请点击屏幕重新加载！"
+                android:textColor="@color/font_color_66" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_verfication"
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/head"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/ic_user"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_login_user" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/ic_user"
+                android:background="@color/bg_gray" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@+id/view1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="@string/login_phone_hint"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="12dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_SendVerfiCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/goods_receipt_press"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="@string/get_ver_code"
+                android:textColor="@color/title_color" />
+        </RelativeLayout>
+
+        <View
+            style="@style/line_style"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/ic_pws"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_login_pws" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/ic_pws"
+                android:background="@color/bg_gray" />
+
+            <EditText
+                android:id="@+id/et_verification_code"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/view2"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="@string/login_ver_code_input"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="12dp"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bt_login"
+            style="@style/layout_width_height_fw"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/login_selector"
+            android:text="@string/login_in"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/lee_progressBar"
+                style="@style/ProgressBar_loading"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:indeterminate="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

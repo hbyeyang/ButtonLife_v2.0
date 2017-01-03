@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_width_height_ff" >
+
+    <TextView
+        android:id="@+id/childText"
+        style="@style/layout_width_height_ww"
+        android:layout_marginLeft="12dp"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/childImage"
+        style="@style/layout_width_height_ww"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+</LinearLayout>

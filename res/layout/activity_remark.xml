@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:gravity="left|top"
+        android:inputType="textMultiLine"
+        android:maxLength="200"
+        android:textSize="14sp" >
+    </EditText>
+
+    <Button
+        android:id="@+id/bt_commit_content"
+        style="@style/layout_width_height_fw"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/buttom_selector"
+        android:text="@string/commit"
+        android:textColor="@color/white" />
+
+</LinearLayout>

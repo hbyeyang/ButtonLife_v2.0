@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ww"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/layout_width_height_ww"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="水票简介"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/img"
+        style="@style/layout_width_height_ww"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+/.gradle/
+/.idea/
+/.settings/
+/build/
+/bin/
+/gen/
+/gradle/
+/out/
+ButtonLife_v2.0.iml
+
+build/outputs/logs/manifest-merger-debug-report.txt

@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_fw"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/bg_gray" />
+
+    <RelativeLayout
+        android:id="@+id/rl_goods_row"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/tv_category_name"
+            style="@style/home_column_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_more"
+            style="@style/home_column_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:text="@string/more"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_goods"
+        style="@style/layout_width_height_fw"
+        android:layout_margin="1dp"
+        android:orientation="vertical">
+
+        <com.anniu.shandiandaojia.view.MyGridView
+            android:id="@+id/gridview_goods"
+            style="@style/layout_width_height_fw"
+            android:gravity="center"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:smoothScrollbar="false"
+            android:stretchMode="columnWidth" />
+
+    </LinearLayout>
+
+</LinearLayout>

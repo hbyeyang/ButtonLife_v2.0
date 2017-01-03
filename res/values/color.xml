@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <color name="font_color_66">#666666</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <color name="font_color_green">#00aa85</color>
+    <color name="smallFontColor">#666666</color>
+    <color name="line_color">#e7e7e7</color>
+    <color name="dialog_btn_select_color">#e6e6e6</color>
+    <color name="dialog_button_color">#F43333</color>
+    <color name="null_color">#00000000</color>
+    <color name="title_color">#00C864</color>
+    <color name="title_tv_color">#ffffff</color>
+    <color name="page_bg_gray">#f1f1f1</color>
+    <color name="font_color_33">#333333</color>
+    <color name="text_color_1">#E57658</color>
+    <!-- 背景灰色 -->
+    <color name="bg_gray">#F2F2F2</color>
+    <color name="red">#FF0000</color>
+    <color name="text_price">#B2B2B2</color>
+    <color name="red_bottom">#F5422A</color>
+    <color name="white_bottom">#F8F5F7</color>
+    <color name="price_color1">#FF9226</color>
+    <color name="search_bg">#DDDDDD</color>
+    <color name="text_color">#FF5C26</color>
+    <color name="transparentblue">#445CACEE</color>
+    <!-- 二维码扫描的三个值 -->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <!-- 标题的背景色 -->
+    <color name="title_bg_color">#F7F7F7</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+    <!-- 订单详情字体颜色-橘红 -->
+    <color name="order_text_color">#FF5C26</color>
+    <!-- 水票颜色 -->
+    <color name="water_ticket_color">#26C9FF</color>
+    <!-- 一键购水字体颜色 -->
+    <color name="a_key_but_water">#4DD2FF</color>
+    <!-- 整箱购字体颜色 -->
+    <color name="full_buy">#F8CD4B</color>
+    <!-- 分类字体颜色 -->
+    <color name="classify">#F27449</color>
+    
+    <color name="color_location_text">#4DB6AC</color>
+    <!-- 商品边框颜色 -->
+    <color name="goods_border">#EEEEEE</color>
+    <!-- tab默认字体颜色 -->
+    <color name="category_tab_color_normal">#333333</color>
+    <!-- tab选中字体颜色 -->
+    <color name="category_tab_color_selected">#FF4D4D</color>
+    <!-- 支付颜色 -->
+    <color name="bottom_pay">#FF8000</color>
+
+    <color name="province_line_border">#C7C7C7</color>
+
+</resources>

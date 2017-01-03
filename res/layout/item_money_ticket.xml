@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_fw"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/coupon"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/layout_width_height_ww"
+        android:layout_alignTop="@id/tv_price"
+        android:layout_toRightOf="@id/tv_price"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_disc"
+        style="@style/layout_width_height_ww"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/tv_price"
+        android:textSize="10sp" />
+
+    <RelativeLayout
+        style="@style/layout_width_height_fw"
+        android:layout_below="@id/tv_price"
+        android:background="#cccccc"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/layout_width_height_ww"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/valid_date"
+            style="@style/layout_width_height_ww"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

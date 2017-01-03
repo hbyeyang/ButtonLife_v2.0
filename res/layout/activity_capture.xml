@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout style="@style/layout_width_height_ff" >
+
+        <SurfaceView
+            android:id="@+id/preview_view"
+            style="@style/layout_width_height_ff"
+            android:layout_gravity="center" />
+
+        <com.mining.app.zxing.view.ViewfinderView
+            android:id="@+id/viewfinder_view"
+            style="@style/layout_width_height_ww" />
+
+        <include
+            android:id="@+id/include1"
+            style="@style/layout_width_height_fw"
+            layout="@layout/title_bar" />
+    </RelativeLayout>
+
+</FrameLayout>

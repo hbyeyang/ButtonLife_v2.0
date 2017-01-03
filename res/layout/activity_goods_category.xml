@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_width_height_ff"
+    android:background="@color/page_bg_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/goods_category_title"
+        layout="@layout/title_bar_category" />
+
+    <LinearLayout
+        android:id="@+id/ll_group"
+        style="@style/layout_width_height_fw"
+        android:layout_below="@id/goods_category_title"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.anniu.shandiandaojia.view.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_pager"
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/ll_group"
+        android:layout_marginBottom="50dp" />
+
+    <include
+        android:id="@+id/layout_cart"
+        layout="@layout/home_cart" />
+
+    <RelativeLayout
+        android:id="@+id/rl_error"
+        style="@style/layout_width_height_ff"
+        android:layout_below="@id/goods_category_title"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:background="@color/page_bg_gray"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/layout_width_height_ww"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/no_wifi" />
+
+            <TextView
+                android:id="@+id/lee_error_msg"
+                style="@style/layout_width_height_ww"
+                android:layout_marginBottom="10dp"
+                android:text="网络异常"
+                android:textColor="@color/font_color_33" />
+
+            <TextView
+                style="@style/layout_width_height_ww"
+                android:text="请点击屏幕重新加载！"
+                android:textColor="@color/font_color_66" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/layout_width_height_ff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/lee_progressBar"
+                style="@style/ProgressBar_loading"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:indeterminate="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
